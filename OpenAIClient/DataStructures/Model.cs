@@ -20,7 +20,6 @@
 using Newtonsoft.Json.Linq;
 
 using org.GraphDefined.Vanaheimr.Illias;
-using Telegram.Bot.Helpers;
 
 #endregion
 
@@ -28,7 +27,7 @@ namespace com.GraphDefined.AI.OpenAI
 {
 
     /// <summary>
-    /// An AI model.
+    /// An OpenAI AI language model.
     /// https://platform.openai.com/docs/api-reference/models
     /// </summary>
     public class Model : IHasId<Model_Id>,
@@ -40,7 +39,7 @@ namespace com.GraphDefined.AI.OpenAI
         #region Propertis
 
         /// <summary>
-        /// The unique identification of the AI model.
+        /// The unique identification of the AI language model.
         /// </summary>
         [Mandatory]
         public Model_Id     Id            { get; }
@@ -52,25 +51,25 @@ namespace com.GraphDefined.AI.OpenAI
         public Object_Type  ObjectType    { get; }
 
         /// <summary>
-        /// The creation timestamp of the AI model.
+        /// The creation timestamp of the AI language model.
         /// </summary>
         [Mandatory]
         public DateTime     Created       { get; }
 
         /// <summary>
-        /// The owner identification of the AI model.
+        /// The owner identification of the AI language model.
         /// </summary>
         [Mandatory]
         public Owner_Id     OwnedBy       { get; }
 
         /// <summary>
-        /// The optional unique identification of the root AI model.
+        /// The optional unique identification of the root AI language model.
         /// </summary>
         [Optional]
         public Model_Id?    Root          { get; }
 
         /// <summary>
-        /// The optional unique identification of the parent AI model.
+        /// The optional unique identification of the parent AI language model.
         /// </summary>
         [Optional]
         public Model_Id?    Parent        { get; }
@@ -80,14 +79,14 @@ namespace com.GraphDefined.AI.OpenAI
         #region Constructor(s)
 
         /// <summary>
-        /// Create a new AI model.
+        /// Create a new AI language model.
         /// </summary>
-        /// <param name="Id">An unique identification of the AI model.</param>
+        /// <param name="Id">An unique identification of the AI language model.</param>
         /// <param name="ObjectType">An object type.</param>
-        /// <param name="Created">An creation timestamp of the AI model.</param>
-        /// <param name="OwnedBy">An owner identification of the AI model.</param>
-        /// <param name="Root">An optional unique identification of a root AI model.</param>
-        /// <param name="Parent">An optional unique identification of a parent AI model.</param>
+        /// <param name="Created">An creation timestamp of the AI language model.</param>
+        /// <param name="OwnedBy">An owner identification of the AI language model.</param>
+        /// <param name="Root">An optional unique identification of a root AI language model.</param>
+        /// <param name="Parent">An optional unique identification of a parent AI language model.</param>
         public Model(Model_Id     Id,
                      Object_Type  ObjectType,
                      DateTime     Created,
@@ -331,7 +330,7 @@ namespace com.GraphDefined.AI.OpenAI
         /// <summary>
         /// Return a JSON representation of this object.
         /// </summary>
-        /// <param name="CustomModelSerializer">A delegate to serialize custom AI model JSON objects.</param>
+        /// <param name="CustomModelSerializer">A delegate to serialize custom AI language model JSON objects.</param>
         public JObject ToJSON(CustomJObjectSerializerDelegate<Model>? CustomModelSerializer = null)
         {
 

@@ -187,7 +187,7 @@ namespace com.GraphDefined.AI.OpenAI
         #region GetModels   (...)
 
         /// <summary>
-        /// Request all AI models from the remote API.
+        /// Request all AI language models from the remote API.
         /// </summary>
         /// <param name="Timestamp">The optional timestamp of the request.</param>
         /// <param name="EventTrackingId">An optional event tracking identification for correlating this request with other events.</param>
@@ -348,9 +348,9 @@ namespace com.GraphDefined.AI.OpenAI
         #region GetModel   (...)
 
         /// <summary>
-        /// Request an AI model from the remote API.
+        /// Request an AI language model from the remote API.
         /// </summary>
-        /// <param name="ModelId">An AI model identification.</param>
+        /// <param name="ModelId">An AI language model identification.</param>
         /// 
         /// <param name="Timestamp">The optional timestamp of the request.</param>
         /// <param name="EventTrackingId">An optional event tracking identification for correlating this request with other events.</param>
